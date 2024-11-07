@@ -1,0 +1,67 @@
+﻿@model IEnumerable<EmployeeManagement.Models.tb_EMPLOYEE>
+
+@{
+    ViewBag.Title = "DANH SÁCH NHÂN VIÊN ";
+}
+
+
+<p>
+    <a href="@Url.Action("Create")" class="btn btn-primary mb-3">
+        <i class="fa fa-plus"></i> Tạo mới
+    </a>
+</p>
+
+<table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.tb_DEPARTMENT.DepartmentName)</th>
+            <th>@Html.DisplayNameFor(model => model.tb_DIVISION.DivisionName)</th>
+            <th>@Html.DisplayNameFor(model => model.tb_EDUCATION.EducationName)</th>
+            <th>@Html.DisplayNameFor(model => model.tb_POSITION.PositionName)</th>
+            <th>@Html.DisplayNameFor(model => model.FullName)</th>
+            <th>@Html.DisplayNameFor(model => model.Gender)</th>
+            <th>@Html.DisplayNameFor(model => model.DateOfBirth)</th>
+            <th>@Html.DisplayNameFor(model => model.PhoneNumber)</th>
+            <th>@Html.DisplayNameFor(model => model.IdentityCard)</th>
+            <th>@Html.DisplayNameFor(model => model.Address)</th>
+            <th>@Html.DisplayNameFor(model => model.ProfilePicture)</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.tb_DEPARTMENT.DepartmentName)</td>
+                <td>@Html.DisplayFor(modelItem => item.tb_DIVISION.DivisionName)</td>
+                <td>@Html.DisplayFor(modelItem => item.tb_EDUCATION.EducationName)</td>
+                <td>@Html.DisplayFor(modelItem => item.tb_POSITION.PositionName)</td>
+                <td>@Html.DisplayFor(modelItem => item.FullName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Gender)</td>
+                <td>@Html.DisplayFor(modelItem => item.DateOfBirth)</td>
+                <td>@Html.DisplayFor(modelItem => item.PhoneNumber)</td>
+                <td>@Html.DisplayFor(modelItem => item.IdentityCard)</td>
+          
+      
+                <td>@Html.DisplayFor(modelItem => item.Address)</td>
+                <td>
+
+
+                    <img src="@Url.Action("GetImage", "tb_EMPLOYEE", new { id = item.EmployeeID })" alt="Ảnh đại diện" class="img-thumbnail" style="max-width: 100px;" />
+
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = item.EmployeeID })" class="btn btn-sm btn-warning">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a href="@Url.Action("Details", new { id = item.EmployeeID })" class="btn btn-sm btn-info">
+                        <i class="fa fa-info-circle"></i>
+                    </a>
+                    <a href="@Url.Action("Delete", new { id = item.EmployeeID })" class="btn btn-sm btn-danger">
+                        <i class="fa fa-trash"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

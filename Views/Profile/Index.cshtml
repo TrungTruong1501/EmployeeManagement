@@ -1,0 +1,120 @@
+﻿@{
+    ViewBag.Title = "Employee Management";
+    Layout = null; // Use your project layout or leave null if you don't have a master layout
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        .sidebar {
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            background-color: #2C3E50;
+            padding-top: 20px;
+        }
+
+            .sidebar a {
+                padding: 15px;
+                text-decoration: none;
+                font-size: 18px;
+                color: white;
+                display: block;
+            }
+
+                .sidebar a:hover {
+                    background-color: #1ABC9C;
+                }
+
+        .content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+
+        .table thead th {
+            background-color: #3498DB;
+            color: white;
+        }
+
+        .status-label {
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .active-status {
+            background-color: #5cb85c;
+            color: white;
+        }
+
+        .inactive-status {
+            background-color: #d9534f;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#">Tổng quan</a>
+        <a href="#">Danh sách nhân viên</a>
+        <a href="#">Quản lý nhân viên</a>
+        <a href="#">Quản lý phòng ban</a>
+        <a href="#">Quản lý lương</a>
+        <a href="#">Quản lý công tác</a>
+        <a href="#">Nhóm nhân viên</a>
+        <a href="#">Khen thưởng - Kỷ luật</a>
+        <a href="#">Tài khoản</a>
+    </div>
+
+    <div class="content">
+        <h2>Danh sách nhân viên</h2>
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Mã nhân viên</th>
+                            <th>Ảnh</th>
+                            <th>Tên nhân viên</th>
+                            <th>Giới tính</th>
+                            <th>Ngày sinh</th>
+                            <th>Nơi sinh</th>
+                            <th>Số CMND</th>
+                            <th>Tình trạng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>MNVI1571124772</td>
+                            <td><img src="https://via.placeholder.com/50" alt="Profile" /></td>
+                            <td>Trần Văn Triệu</td>
+                            <td>Nam</td>
+                            <td>20-12-1990</td>
+                            <td>Nghệ An</td>
+                            <td>443212354</td>
+                            <td><span class="status-label inactive-status">Đã nghỉ việc</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>MNVI1571124337</td>
+                            <td><img src="https://via.placeholder.com/50" alt="Profile" /></td>
+                            <td>Trần Diễm My</td>
+                            <td>Nữ</td>
+                            <td>15-10-1997</td>
+                            <td>Nghệ An</td>
+                            <td>3716024774</td>
+                            <td><span class="status-label active-status">Đang làm việc</span></td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+﻿@model EmployeeManagement.Models.tb_EMPLOYEE
+
+@{
+  
+}
+
+
+<div>
+   
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tb_DEPARTMENT.DepartmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tb_DEPARTMENT.DepartmentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tb_DIVISION.DivisionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tb_DIVISION.DivisionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tb_EDUCATION.EducationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tb_EDUCATION.EducationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tb_POSITION.PositionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tb_POSITION.PositionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdentityCard)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdentityCard)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfilePicture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfilePicture)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
